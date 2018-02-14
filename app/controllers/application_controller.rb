@@ -8,7 +8,7 @@ class ApplicationController < Sinatra::Base
   end
 
   get '/' do
-    
+
   end
 
   get '/posts/new' do
@@ -18,5 +18,9 @@ class ApplicationController < Sinatra::Base
   post '/posts' do
     @post = Post.create(:name => params[:name], :content => params[:content])
     erb :show
+  end
+
+  get '/posts' do
+
   end
 end
